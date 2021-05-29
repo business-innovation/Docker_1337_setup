@@ -1,4 +1,4 @@
-# Docker_1337_setup
+# Docker_setup_MacOs
 
 link to goinfre:
 
