@@ -3,25 +3,17 @@
 # This script will install docker and run a Container that will install/configure/and start a LAMP server automatically !
 # if you dont have the goinfre folder just delete the section where we use it as a base folder and you are ready to go.
 # normal macOs version will be added soon !
-link to goinfre:
+Error :
 
-    rm -rf ~/.docker ~/Library/Containers ~/goinfre/DOCKER/.docker ~/goinfre/DOCKER/Containers
-    mkdir -p ~/goinfre/DOCKER/.docker
-    mkdir -p ~/goinfre/DOCKER/Containers
-
-    ln -s ~/goinfre/DOCKER/.docker ~/.docker
-    ln -s ~/goinfre/DOCKER/Containers ~/Library/Containers
-
-install docker && docker-machine:
-    brew install docker docker-machine
-
-create the docker-machine:
-    docker-machine create -d virtualbox default
-
-use the docker-machine:
-    eval $(docker-machine env default)
-
-run apache :
-docker run -it -v $PATH:/var/www/html -p 80:80 benaddayoussef/lampdocker:v2
-
-ready...
+Cloning into 'apache_runner'...
+Enabling module rewrite.
+To activate the new configuration, you need to run:
+  service apache2 restart
+ * Restarting Apache httpd web server apache2
+Output of config test was:
+   ...fail!
+ * The apache2 configtest failed.
+AH00526: Syntax error on line 2 of /etc/apache2/sites-enabled/000-default.conf:
+AllowOverride not allowed here
+Action 'configtest' failed.
+The Apache error log may have more information.
